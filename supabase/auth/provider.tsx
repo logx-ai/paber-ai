@@ -1,9 +1,9 @@
 "use client";
 
-import { createContext, useContext, useEffect, useMemo, useState } from "react";
-import { useRouter } from "next/navigation";
-import supabase from "@/supabase/browser";
 import { logsnag } from "@/lib/logs";
+import supabase from "@/supabase/browser";
+import { useRouter } from "next/navigation";
+import { createContext, useContext, useEffect, useMemo, useState } from "react";
 
 export const EVENTS = {
   PASSWORD_RECOVERY: "PASSWORD_RECOVERY",

@@ -2,7 +2,7 @@ import { LogSnag } from "@logsnag/node";
 
 export const logsnag = new LogSnag({
   token: process.env.NEXT_PUBLIC_LOGSNAG!,
-  project: "logx",
+  project: "paber-ai",
 });
 
 export const sendError = async (feature: any, desc: any) => {
