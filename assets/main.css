@@ -1,6 +1,62 @@
 @tailwind base;
-@tailwind components;
 @tailwind utilities;
+@tailwind components;
+
+@font-face {
+  font-family: "IBM";
+  font-style: normal;
+  font-display: swap;
+  font-weight: 100;
+  src: url("/fonts/IBM-Thin.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "IBM";
+  font-style: normal;
+  font-display: swap;
+  font-weight: 200;
+  src: url("/fonts/IBM-ExtraLight.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "IBM";
+  font-style: normal;
+  font-display: swap;
+  font-weight: 300;
+  src: url("/fonts/IBM-Light.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "IBM";
+  font-style: normal;
+  font-display: swap;
+  font-weight: 400;
+  src: url("/fonts/IBM-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "IBM";
+  font-style: normal;
+  font-display: swap;
+  font-weight: 500;
+  src: url("/fonts/IBM-Medium.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "IBM";
+  font-style: normal;
+  font-display: swap;
+  font-weight: 600;
+  src: url("/fonts/IBM-SemiBold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "IBM";
+  font-style: normal;
+  font-display: swap;
+  font-weight: 700;
+  src: url("/fonts/IBM-Bold.ttf") format("truetype");
+}
 
 @layer base {
   :root {
@@ -62,8 +118,25 @@
 @layer base {
   * {
     @apply border-border;
+    font-family: "IBM";
+    scroll-behavior: smooth;
   }
+
   body {
     @apply bg-background text-foreground;
+    -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box; /* Firefox, other Gecko */
+    box-sizing: border-box;
   }
+}
+
+input {
+  -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box; /* Firefox, other Gecko */
+  box-sizing: border-box;
+  @apply font-medium flex h-9 w-full placeholder:text-gray-300 rounded-lg border px-3 py-1 text-sm shadow-sm transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium focus-visible:outline-none focus-visible:ring-0 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50;
+}
+
+textarea {
+  @apply flex min-h-[140px] max-h-[200px] w-full placeholder:text-gray-300 rounded-[10px] border px-3 py-2 text-sm shadow-sm placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-0 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-75;
 }

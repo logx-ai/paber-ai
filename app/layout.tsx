@@ -1,5 +1,6 @@
 import "@/assets/main.css";
 import Head from "@/app/head";
+import { Toaster } from "react-hot-toast";
 import createClient from "@/supabase/server";
 import type { Metadata, Viewport } from "next";
 import { ThemeProvider } from "@/components/theme";
@@ -73,6 +74,21 @@ const RootLayout = async ({ children }: { children: React.ReactNode }) => {
             defaultTheme="light"
             disableTransitionOnChange
           >
+            <Toaster
+              containerStyle={{
+                left: "10px",
+                right: "10px",
+              }}
+              toastOptions={{
+                style: {
+                  borderRadius: "12px",
+                  minWidth: "fit-content",
+                  boxShadow:
+                    "var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--toast-shadow)",
+                },
+              }}
+            />
+
             {children}
           </ThemeProvider>
         </AuthProvider>
